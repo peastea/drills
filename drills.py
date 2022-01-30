@@ -1,11 +1,13 @@
 from flask import Flask, render_template, jsonify
 import json
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO)
-
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 def load_drills():
-    with open('./static/drills/drills.json') as json_file:
+    
+    with open(os.path.join(THIS_FOLDER, 'static/drills/drills.json')) as json_file:
         drills = json.load(json_file)['drills']
         logging.info(drills)
     return drills
