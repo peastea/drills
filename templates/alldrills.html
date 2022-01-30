@@ -1,5 +1,10 @@
 {%extends "layout.html" %}
 
 {% block content%} 
-    <img src="{{url_for('static', filename='images/drill.png')}}">
+<div class="grid-container">
+    {%for path in paths %}
+    <img src="{{url_for('static', filename=path)}}">
+    {% endfor %}
+</div>
+    
 {% endblock content%}

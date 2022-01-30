@@ -1,0 +1,25 @@
+{
+    "drills" : [
+        {
+            "name" : "Achter",
+            "path" : "drills/Achter",
+            "hasSteps" : true,
+            "minPlayers" : 4,
+            "minGoalies" : 1
+        },
+        {
+            "name" : "Achter Variante",
+            "path" : "drills/AchterVariante",
+            "hasSteps" : true,
+            "minPlayers" : 4,
+            "minGoalies" : 1
+        },
+        {
+            "name" : "Around The Circle",
+            "path" : "drills/AroundTheCircle",
+            "hasSteps" : true,
+            "minPlayers" : 4,
+            "minGoalies" : 1
+        }
+    ]
+}

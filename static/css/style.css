@@ -1,0 +1,9 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
