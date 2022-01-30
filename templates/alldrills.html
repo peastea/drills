@@ -2,8 +2,15 @@
 
 {% block content%} 
 <div class="grid-container">
-    {%for path in paths %}
-    <img src="{{url_for('static', filename=path)}}">
+    {%for drill in drills %}
+    <div class="overview-item">
+        <div class="overview-image">
+            {% set path = drill['path'] ~ "/komplett.png"%}
+            <img src="{{url_for('static', filename=path)}}">
+        </div>
+        <h5 class="overview-name">{{drill['name']}}</h5>
+    </div>
+    
     {% endfor %}
 </div>
     

@@ -5,5 +5,49 @@ img {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-  }
+    grid-template-columns:  100%;
+    
+}
+
+.overview-item {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: gray;
+}
+
+.overview-item:hover{
+    background-color: lightblue;
+}
+
+.overview-image{
+    margin: 10px;
+}
+
+.overview-name{
+    text-align: center;
+    font-size: larger;
+}
+
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns:  repeat(2, 1fr);
+        column-gap: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns:  repeat(3, 1fr);
+    }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {} 
