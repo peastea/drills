@@ -1,15 +1,17 @@
-from flask import Flask, render_template, jsonify
+
+from cmath import log
+from flask import Flask, render_template, jsonify, request
 import json
 import logging
 import os
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 def load_drills():
     
     with open(os.path.join(THIS_FOLDER, 'static/drills/drills.json')) as json_file:
         drills = json.load(json_file)['drills']
-        logging.info(drills)
+        logging.info("drills read from json")
     return drills
 
 def getpath(drills):
@@ -25,7 +27,28 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     drills = load_drills()
-    return render_template('/alldrills.html', drills=drills, paths=getpath(drills), names=getname(drills))
+    return render_template('/alldrills.html', drills=drills)
+
+@app.route("/singledrill/<name>", methods=['GET','POST'])
+def singledrill(name):
+    selecteddrill = None
+    drills = load_drills()
+    for drill in drills:
+        if drill['name'] == str(name).strip():
+            selecteddrill = drill
+
+    
+
+    if selecteddrill != None:
+        logging.info("selected drill: " + str(selecteddrill))
+        return render_template('/singledrill.html')
+
+    return ("<h1>404 - Drill not found!</h1>")
+
+@app.route('/background_process_test')
+def background_process_test():
+    
+    return json.dumps(load_drills())
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

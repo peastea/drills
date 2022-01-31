@@ -6,6 +6,7 @@ img {
 .grid-container {
     display: grid;
     grid-template-columns:  100%;
+    row-gap: 5px;
     
 }
 
@@ -13,6 +14,7 @@ img {
     border-style: solid;
     border-radius: 15px;
     border-color: gray;
+    background-color: lightgray;
 }
 
 .overview-item:hover{

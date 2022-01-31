@@ -1,0 +1,17 @@
+{%extends "layout.html" %}
+{% block header %}    
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        $.getJSON('/background_process_test',
+            function(data) {
+                console.log(data);
+        });
+        console.log("Hi");
+        return false;
+    });
+</script>
+{% endblock header %}
+{% block content %}
+<div class='drill-container' id="singledrillcontainer"></div>
+{% endblock content %}
+

@@ -1,15 +1,21 @@
 {%extends "layout.html" %}
+{% block header %}
 
+
+
+{% endblock header %}
 {% block content%} 
 <div class="grid-container">
     {%for drill in drills %}
-    <div class="overview-item">
-        <div class="overview-image">
-            {% set path = drill['path'] ~ "/komplett.png"%}
-            <img src="{{url_for('static', filename=path)}}">
+        {%set drillname = drill['name']%}
+        <a href="{{url_for('singledrill', name=drillname)}}">
+        <div class="overview-item">
+            <h5 class="overview-name">{{drill['name']}}</h5>
+            <div class="overview-image">
+                {% set path = drill['path'] ~ "/komplett.png"%}
+                <img src="{{url_for('static', filename=path)}}">
+            </div>   
         </div>
-        <h5 class="overview-name">{{drill['name']}}</h5>
-    </div>
     
     {% endfor %}
 </div>

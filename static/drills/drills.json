@@ -8,7 +8,7 @@
             "minGoalies" : 1
         },
         {
-            "name" : "Achter Variante",
+            "name" : "Achter - Variante",
             "path" : "drills/AchterVariante",
             "hasSteps" : true,
             "minPlayers" : 4,
@@ -20,6 +20,62 @@
             "hasSteps" : true,
             "minPlayers" : 4,
             "minGoalies" : 1
+        },
+        {
+            "name" : "Aufbau Klassisch",
+            "path" : "drills/AufbauKlassisch",
+            "hasSteps" : false,
+            "minPlayers" : 3,
+            "minGoalies" : 1
+        },
+        {
+            "name" : "Aufbau Klassisch - Variante",
+            "path" : "drills/AufbauKlassischVariante",
+            "hasSteps" : false,
+            "minPlayers" : 4,
+            "minGoalies" : 1
+        },
+        {
+            "name" : "Canada Cup",
+            "path" : "drills/CanadaCup",
+            "hasSteps" : true,
+            "minPlayers" : 8,
+            "minGoalies" : 2
+        },
+        {
+            "name" : "Karussell",
+            "path" : "drills/KarussellMitDrop",
+            "hasSteps" : true,
+            "minPlayers" : 6,
+            "minGoalies" : 2
+        },
+        {
+            "name" : "Abschluss - Spielform",
+            "path" : "drills/SpielformAbschluss",
+            "hasSteps" : true,
+            "minPlayers" : 6,
+            "minGoalies" : 2
+        },
+        {
+            "name" : "Transition",
+            "path" : "drills/Transition",
+            "hasSteps" : true,
+            "minPlayers" : 6,
+            "minGoalies" : 1
+        },
+        {
+            "name" : "Transition - BFH",
+            "path" : "drills/TransitionBFH",
+            "hasSteps" : true,
+            "minPlayers" : 5,
+            "minGoalies" : 2
+        },
+        {
+            "name" : "Abschluss - Zweikampf",
+            "path" : "drills/ZweikampfAbschluss",
+            "hasSteps" : true,
+            "minPlayers" : 8,
+            "minGoalies" : 2
         }
     ]
 }
