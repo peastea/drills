@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href={{url_for('static', filename='css/style.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='css/layout.css')}}>
     <title>Drills</title>
     {% block header %}
     {% endblock header %}
 </head>
 <body>
-   <h1>Fastbreaker Hockey Drills</h1>
-    <div>
+   
+    <div class="content">
+        <div class="left"> </div>
+        <div class="header"> <h1>Fastbreaker Hockey Drills</h1></div>
+        <div class="right"> </div>
+        <div class="main">
          {% block content %}
          {% endblock content %}
+        </div>
+        <div class="footer"> Footer</div>
+    
     </div>
 </body>
 </html>

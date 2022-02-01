@@ -3,16 +3,18 @@ img {
     height: auto;
 }
 
-.grid-container {
+
+
+.overview-container {
     display: grid;
     grid-template-columns:  100%;
-    row-gap: 5px;
+    row-gap: 10px;
     
 }
 
 .overview-item {
-    border-style: solid;
-    border-radius: 15px;
+    border-style: none;
+    border-radius: none;
     border-color: gray;
     background-color: lightgray;
 }
@@ -25,25 +27,25 @@ img {
     margin: 10px;
 }
 
-.overview-name{
+ .overview-link{
+    text-decoration: none;
     text-align: center;
     font-size: larger;
-}
-
+    color: black;
+    text-decoration: none;
+ }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
-    .grid-container {
+    .overview-container {
         grid-template-columns:  repeat(2, 1fr);
-        column-gap: 5px;
-        margin-left: 10%;
-        margin-right: 10%;
+        column-gap: 10px;
     }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
-    .grid-container {
+    .overview-container {
         grid-template-columns:  repeat(3, 1fr);
     }
  }
