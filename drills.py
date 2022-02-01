@@ -1,9 +1,10 @@
 
 from cmath import log
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, url_for
 import json
 import logging
 import os
+import glob
 
 logging.basicConfig(level=logging.DEBUG)
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -41,7 +42,11 @@ def singledrill(name):
 
     if selecteddrill != None:
         logging.info("selected drill: " + str(selecteddrill))
-        return render_template('/singledrill.html')
+        folder = os.listdir(os.path.join(THIS_FOLDER, "static/" + selecteddrill['path']))
+        images = [selecteddrill['path'] +"/"+ file for file in folder]
+
+        print(images)
+        return render_template('/singledrill.html', drill=selecteddrill, images=images)
 
     return ("<h1>404 - Drill not found!</h1>")
 

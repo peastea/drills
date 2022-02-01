@@ -12,6 +12,33 @@
 </script>
 {% endblock header %}
 {% block content %}
-<div class='drill-container' id="singledrillcontainer"></div>
+    {%for image in images %}
+    <div>
+        <img class="slideshow" src={{url_for('static', filename=image)}}>
+    </div>    
+    
+    {% endfor %}
+    <button onclick="plusDivs(-1)">&#10094;</button>
+    <button onclick="plusDivs(1)">&#10095;</button>
+    
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("slideshow");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>    
 {% endblock content %}
 
