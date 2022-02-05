@@ -6,10 +6,10 @@
             function(data) {
                 console.log(data);
         });
-        console.log("Hi");
         return false;
     });
 </script>
+
 {% endblock header %}
 {% block content %}
     <div class="slideshow-container">
@@ -23,24 +23,6 @@
       <a class="next" onclick="plusDivs(1)">&#10095;</a>
   </div>
     
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-        
-        function plusDivs(n) {
-          showDivs(slideIndex += n);
-        }
-        
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("slideshow-img");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          x[slideIndex-1].style.display = "block";  
-        }
-    </script>    
+  <script src={{url_for('static', filename='js/slideshow.js')}}></script>    
 {% endblock content %}
 
