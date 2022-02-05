@@ -8,15 +8,13 @@
 <div class="overview-container">
     {%for drill in drills %}
         {%set drillname = drill['name']%}
-        <div class="overview-item">
-            <a class="overview-link" href="{{url_for('singledrill', name=drillname)}}">
+            <a class="overview-link overview-item" href="{{url_for('singledrill', name=drillname)}}">
                 <h5>{{drill['name']}}</h5>
                 <div class="overview-image">
                     {% set path = drill['path'] ~ "/komplett.png"%}
                     <img src="{{url_for('static', filename=path)}}">
                 </div>  
             </a> 
-        </div>
         
     {% endfor %}
 </div>
