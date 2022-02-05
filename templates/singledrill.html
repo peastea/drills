@@ -12,14 +12,16 @@
 </script>
 {% endblock header %}
 {% block content %}
-    {%for image in images %}
-    <div>
-        <img class="slideshow" src={{url_for('static', filename=image)}}>
-    </div>    
-    
-    {% endfor %}
-    <button onclick="plusDivs(-1)">&#10094;</button>
-    <button onclick="plusDivs(1)">&#10095;</button>
+    <div class="slideshow-container">
+      
+      {%for image in images %} 
+      <div> 
+        <img class="slideshow-img" src={{url_for('static', filename=image)}}>
+      </div>  
+      {% endfor %}
+      <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="next" onclick="plusDivs(1)">&#10095;</a>
+  </div>
     
     <script>
         var slideIndex = 1;
@@ -31,7 +33,7 @@
         
         function showDivs(n) {
           var i;
-          var x = document.getElementsByClassName("slideshow");
+          var x = document.getElementsByClassName("slideshow-img");
           if (n > x.length) {slideIndex = 1}
           if (n < 1) {slideIndex = x.length}
           for (i = 0; i < x.length; i++) {

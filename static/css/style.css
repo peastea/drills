@@ -3,8 +3,6 @@ img {
     height: auto;
 }
 
-
-
 .overview-container {
     display: grid;
     grid-template-columns:  100%;
@@ -27,13 +25,39 @@ img {
     margin: 10px;
 }
 
- .overview-link{
-    text-decoration: none;
+.overview-link{
     text-align: center;
     font-size: larger;
     color: black;
     text-decoration: none;
- }
+}
+
+.slideshow-container{
+    position: relative;
+    
+}
+
+.slideshow-img{
+    margin: auto;   
+}
+
+.prev, .next{
+    cursor: pointer;    
+    position: absolute;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    width: 5%;
+    background-color: rgba(88, 88, 88,.2);
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.next{right:0;}
+.prev{left:0;}
+
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
