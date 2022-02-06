@@ -36,9 +36,7 @@ def singledrill(name):
     drills = load_drills()
     for drill in drills:
         if drill['name'] == str(name).strip():
-            selecteddrill = drill
-
-    
+            selecteddrill = drill  
 
     if selecteddrill != None:
         logging.info("selected drill: " + str(selecteddrill))
@@ -46,13 +44,28 @@ def singledrill(name):
         images = [selecteddrill['path'] +"/"+ file for file in folder]
 
         print(images)
-        return render_template('/singledrill.html', drill=selecteddrill, images=images)
+        print(selecteddrill['name'])
+        return render_template('/singledrill.html', drill=selecteddrill, images=images, drillname=selecteddrill['name'])
 
     return ("<h1>404 - Drill not found!</h1>")
 
 @app.route('/alldrills')
 def alldrills():    
     return jsonify(load_drills())
+
+@app.route('/singledrillJSON/<name>', methods=['GET'])
+def singledrillJSON(name):    
+    selecteddrill = None
+    drills = load_drills()
+    for drill in drills:
+        if drill['name'] == str(name).strip():
+            selecteddrill = drill 
+
+    if selecteddrill != None:
+        folder = os.listdir(os.path.join(THIS_FOLDER, "static/" + selecteddrill['path']))
+        images = [url_for('static', filename=selecteddrill['path'] +"/"+ file) for file in folder]
+        selecteddrill['images'] = images
+    return jsonify(selecteddrill)
 
 if __name__ == "__main__":
     app.run(debug=True)
