@@ -1,3 +1,8 @@
+:root {
+    --primary-color: rgb(2, 164, 177);
+    --secondary-color: white;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -6,8 +11,8 @@ img {
 .filter{
     display: flex;
     align-items: center;
-    background-color: darkcyan;
-    color: lightcyan;    
+    background-color: var(--primary-color);
+    color: var(--secondary-color);    
     font-weight: bold;
 }
 
@@ -25,12 +30,12 @@ img {
 .overview-item {
     border-style: none;
     border-radius: none;
-    background-color: lightcyan;
+    background-color: var(--secondary-color);
     transition: background-color 0.5s;
 }
 
 .overview-item:hover{
-    background-color: darkcyan;
+    background-color: var(--primary-color);
 }
 
 .overview-image{
@@ -45,6 +50,7 @@ img {
 }
 
 .slideshow-container{
+    margin-top: 20px;
     position: relative;  
     text-align: center;
     display: block;  

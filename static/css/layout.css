@@ -1,3 +1,9 @@
+:root {
+    --primary-color: rgb(2, 164, 177);
+    --secondary-color: white;
+  }
+  
+
 body { margin: 0; padding: 0; }
 
 .content{
@@ -11,8 +17,8 @@ body { margin: 0; padding: 0; }
 
 .header { 
     grid-area: header; 
-    background-color: darkcyan;
-    color: lightcyan;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     margin-top: 0px;
 }
@@ -20,12 +26,12 @@ body { margin: 0; padding: 0; }
 .main { 
     grid-area: main; 
     padding-bottom: 20px;
-    background-color: lightcyan;
+    background-color: var(--secondary-color);
 }
 .right { grid-area: right; }
 .footer { 
     grid-area: footer; 
-    background-color: darkcyan;
+    background-color: var(--primary-color);
 }
 
 @media only screen and (min-width: 600px) {
