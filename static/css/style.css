@@ -9,21 +9,24 @@ img {
 }
 
 .filter{
+    display: flex;
     align-items: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);    
     font-weight: bold;
+    margin-top: 0px;
 }
 
 .filter-item{
     padding: 10px;
+    margin-top: 0px;
 }
 
 .overview-container {
     display: grid;
     grid-template-columns:  100%;
     row-gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .overview-item {
