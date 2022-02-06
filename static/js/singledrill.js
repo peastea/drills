@@ -19,7 +19,7 @@ function createImages() {
         html = "<img class='slideshow-img' src='"+drill.images[0]+"'></img>";
     } else if (drill.images.length > 1){
         for (i=0; i<drill.images.length; i++){
-            html += "<img class='slideshow-img' src='"+drill.images[i]+"'></img>";
+            html += "<div><img class='slideshow-img' src='"+drill.images[i]+"'></img></div>";
         }
         html += "<a class='prev' onclick='prevSlide()'>&#10094;</a>"
         html += "<a class='next' onclick='nextSlide()'>&#10095;</a>"
@@ -50,7 +50,7 @@ function prevSlide() {
     return false;
 }
 function showImage(){    
-    $("#content > img").hide();
-    $("#content > img").eq(slideCntr).show();
+    $("#content > div").hide();
+    $("#content > div").eq(slideCntr).show();
     return false;
 }

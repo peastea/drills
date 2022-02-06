@@ -45,8 +45,9 @@ img {
 }
 
 .slideshow-container{
-    position: relative;
-    
+    position: relative;  
+    text-align: center;
+    display: block;  
 }
 
 .slideshow-img{
