@@ -64,6 +64,7 @@ def singledrillJSON(name):
     if selecteddrill != None:
         folder = os.listdir(os.path.join(THIS_FOLDER, "static/" + selecteddrill['path']))
         images = [url_for('static', filename=selecteddrill['path'] +"/"+ file) for file in folder]
+        images.sort()
         selecteddrill['images'] = images
     return jsonify(selecteddrill)
 
