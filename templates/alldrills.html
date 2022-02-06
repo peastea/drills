@@ -2,28 +2,36 @@
 {% block header %}
 <script>
     document.addEventListener("DOMContentLoaded", function(){
+        drills = {};
         $.getJSON('/alldrills',
             function(data) {
-                console.log(data);
+                drills = data;
+                displayDrills();
         });
         return false;
     });
+
+    function displayDrills(){
+        var html = '';
+        for(i=0; i<drills.length; i++){
+            html += "<a class='overview-link overview-item' href='/singledrill/"+drills[i].name+"'> \
+                <h5>" + drills[i].name+ "</h5> \
+                <div class='overview-image'> \
+                    <img src='/static/"+drills[i].path+"/komplett.png'> \
+                </div>  \
+            </a>";
+        }
+        $('#content').html(html);
+    }
 </script>
 
 {% endblock header %}
 {% block content%} 
-<div class="overview-container">
-    {%for drill in drills %}
-        {%set drillname = drill['name']%}
-            <a class="overview-link overview-item" href="{{url_for('singledrill', name=drillname)}}">
-                <h5>{{drill['name']}}</h5>
-                <div class="overview-image">
-                    {% set path = drill['path'] ~ "/komplett.png"%}
-                    <img src="{{url_for('static', filename=path)}}">
-                </div>  
-            </a> 
-        
-    {% endfor %}
+<div id="filter">
+
+</div>
+<div id="content" class="overview-container">
+    
 </div>
     
 {% endblock content%}
