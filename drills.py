@@ -50,10 +50,9 @@ def singledrill(name):
 
     return ("<h1>404 - Drill not found!</h1>")
 
-@app.route('/background_process_test')
-def background_process_test():
-    
-    return json.dumps(load_drills())
+@app.route('/alldrills')
+def alldrills():    
+    return jsonify(load_drills())
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,7 +1,14 @@
 {%extends "layout.html" %}
 {% block header %}
-
-
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        $.getJSON('/alldrills',
+            function(data) {
+                console.log(data);
+        });
+        return false;
+    });
+</script>
 
 {% endblock header %}
 {% block content%} 

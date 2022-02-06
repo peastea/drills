@@ -1,14 +1,6 @@
 {%extends "layout.html" %}
 {% block header %}    
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-        $.getJSON('/background_process_test',
-            function(data) {
-                console.log(data);
-        });
-        return false;
-    });
-</script>
+
 
 {% endblock header %}
 {% block content %}
