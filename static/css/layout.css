@@ -19,7 +19,6 @@ body { margin: 0; padding: 0; }
 .left { grid-area: left; }
 .main { 
     grid-area: main; 
-    padding-top: 10px;
     padding-bottom: 20px;
     background-color: lightcyan;
 }

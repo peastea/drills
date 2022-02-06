@@ -3,11 +3,23 @@ img {
     height: auto;
 }
 
+.filter{
+    display: flex;
+    align-items: center;
+    background-color: darkcyan;
+    color: lightcyan;    
+    font-weight: bold;
+}
+
+.filter-item{
+    padding: 10px;
+}
+
 .overview-container {
     display: grid;
     grid-template-columns:  100%;
     row-gap: 10px;
-    
+    margin-top: 10px;
 }
 
 .overview-item {
