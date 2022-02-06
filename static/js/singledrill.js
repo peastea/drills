@@ -24,7 +24,7 @@ function createImages() {
         html += "<div class='selection-buttons'>";
         html += "<a class='selection' onclick='prevSlide()'>&#10094;</a>";
         for (i=0; i<drill.images.length-1; i++){
-            html += "<a class='selection' onclick='setSlide("+i+")'>Step "+(i+1)+"</a>";
+            html += "<a class='selection' onclick='setSlide("+i+")'>"+(i+1)+"</a>";
         }
         html += "<a class='selection' onclick='setSlide("+(drill.images.length-1)+")'>Full</a>";
         html += "<a class='selection' onclick='nextSlide()'>&#10095;</a>";
