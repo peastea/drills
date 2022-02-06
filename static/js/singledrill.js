@@ -19,10 +19,18 @@ function createImages() {
         html = "<img class='slideshow-img' src='"+drill.images[0]+"'></img>";
     } else if (drill.images.length > 1){
         for (i=0; i<drill.images.length; i++){
-            html += "<div><img class='slideshow-img' src='"+drill.images[i]+"'></img></div>";
+            html += "<div class='slideshow-element'><img class='slideshow-img' src='"+drill.images[i]+"'></img></div>";
         }
-        html += "<a class='prev' onclick='prevSlide()'>&#10094;</a>"
-        html += "<a class='next' onclick='nextSlide()'>&#10095;</a>"
+        html += "<div class='selection-buttons'>";
+        html += "<a class='selection' onclick='prevSlide()'>&#10094;</a>";
+        for (i=0; i<drill.images.length-1; i++){
+            html += "<a class='selection' onclick='setSlide("+i+")'>Step "+(i+1)+"</a>";
+        }
+        html += "<a class='selection' onclick='setSlide("+(drill.images.length-1)+")'>Full</a>";
+        html += "<a class='selection' onclick='nextSlide()'>&#10095;</a>";
+        html += "</div>";
+        
+
     } else {
         html = "Image not found!"
     }
@@ -49,8 +57,14 @@ function prevSlide() {
     showImage();
     return false;
 }
+
+function setSlide(cntr){
+    slideCntr = cntr;
+    showImage();
+}
+
 function showImage(){    
-    $("#content > div").hide();
-    $("#content > div").eq(slideCntr).show();
+    $("#content > .slideshow-element").hide();
+    $("#content > .slideshow-element").eq(slideCntr).show();
     return false;
 }

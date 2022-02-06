@@ -9,7 +9,6 @@ img {
 }
 
 .filter{
-    display: flex;
     align-items: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);    
@@ -50,8 +49,7 @@ img {
 }
 
 .slideshow-container{
-    margin-top: 20px;
-    position: relative;  
+    margin-top: 20px; 
     text-align: center;
     display: block;  
 }
@@ -59,24 +57,20 @@ img {
 .slideshow-img{
     margin: auto;   
 }
-
-.prev, .next{
-    cursor: pointer;    
-    position: absolute;
-    height: 100%;
-    top: 0;
-    text-align: center;
-    width: 5%;
-    background-color: rgba(88, 88, 88,.2);
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.selection-buttons{
+    margin-top: 20px;
 }
-.next{right:0;}
-.prev{left:0;}
 
+.selection{
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 10%;
+    line-height: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color);
+}
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
