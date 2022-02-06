@@ -26,6 +26,7 @@ function createImages() {
     } else {
         html = "Image not found!"
     }
+    $('#content').html(html);
     showImage();
 }
 
@@ -34,7 +35,9 @@ function nextSlide() {
         slideCntr += 1;
     } else {
         slideCntr = 0;
-    }       
+    } 
+    showImage();
+    return false;      
 }
 
 function prevSlide() {
@@ -43,8 +46,11 @@ function prevSlide() {
     } else {
         slideCntr = drill.images.length-1;
     }
+    showImage();
+    return false;
 }
 function showImage(){    
     $("#content > img").hide();
     $("#content > img").eq(slideCntr).show();
+    return false;
 }
