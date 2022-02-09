@@ -15,6 +15,13 @@
             "minGoalies" : 1
         },
         {
+            "name" : "Achter - Variante II",
+            "path" : "drills/AchterVariante2",
+            "hasSteps" : true,
+            "minPlayers" : 4,
+            "minGoalies" : 1
+        },
+        {
             "name" : "Around The Circle",
             "path" : "drills/AroundTheCircle",
             "hasSteps" : true,
