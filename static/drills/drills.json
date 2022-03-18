@@ -5,84 +5,84 @@
             "path" : "drills/Achter",
             "hasSteps" : true,
             "minPlayers" : 4,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Achter - Variante",
             "path" : "drills/AchterVariante",
             "hasSteps" : true,
             "minPlayers" : 4,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Achter - Variante II",
             "path" : "drills/AchterVariante2",
             "hasSteps" : true,
             "minPlayers" : 4,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Around The Circle",
             "path" : "drills/AroundTheCircle",
             "hasSteps" : true,
             "minPlayers" : 4,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Aufbau Klassisch",
             "path" : "drills/AufbauKlassisch",
             "hasSteps" : false,
             "minPlayers" : 3,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Aufbau Klassisch - Variante",
             "path" : "drills/AufbauKlassischVariante",
             "hasSteps" : false,
             "minPlayers" : 4,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Canada Cup",
             "path" : "drills/CanadaCup",
             "hasSteps" : true,
             "minPlayers" : 8,
-            "minGoalies" : 2
+            "singleGoalie" : true
         },
         {
             "name" : "Karussell",
             "path" : "drills/KarussellMitDrop",
             "hasSteps" : true,
             "minPlayers" : 6,
-            "minGoalies" : 2
+            "singleGoalie" : false
         },
         {
             "name" : "Abschluss - Spielform",
             "path" : "drills/SpielformAbschluss",
             "hasSteps" : true,
             "minPlayers" : 6,
-            "minGoalies" : 2
+            "singleGoalie" : false
         },
         {
             "name" : "Transition",
             "path" : "drills/Transition",
             "hasSteps" : true,
             "minPlayers" : 6,
-            "minGoalies" : 1
+            "singleGoalie" : true
         },
         {
             "name" : "Transition - BFH",
             "path" : "drills/TransitionBFH",
             "hasSteps" : true,
             "minPlayers" : 5,
-            "minGoalies" : 2
+            "singleGoalie" : false
         },
         {
             "name" : "Abschluss - Zweikampf",
             "path" : "drills/ZweikampfAbschluss",
             "hasSteps" : true,
             "minPlayers" : 8,
-            "minGoalies" : 2
+            "singleGoalie" : false
         }
     ]
 }
