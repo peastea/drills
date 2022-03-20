@@ -83,6 +83,13 @@
             "hasSteps" : true,
             "minPlayers" : 8,
             "singleGoalie" : false
+        },
+        {
+            "name" : "Stop and Go",
+            "path" : "drills/StopAndGo",
+            "hasSteps" : false,
+            "minPlayers" : 4,
+            "singleGoalie" : true
         }
     ]
 }
