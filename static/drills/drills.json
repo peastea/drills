@@ -90,6 +90,13 @@
             "hasSteps" : false,
             "minPlayers" : 4,
             "singleGoalie" : true
+        },
+        {
+            "name" : "Pass-Quadrat",
+            "path" : "drills/PassQuadrat",
+            "hasSteps" : false,
+            "minPlayers" : 5,
+            "singleGoalie" : true
         }
     ]
 }
